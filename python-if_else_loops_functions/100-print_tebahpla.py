@@ -1,4 +1,9 @@
 #!/usr/bin/python3
-# This program prints the ASCII alphabet in reverse order, alternating lowercase and uppercase
+# 100-print_tebahpla.py
 
-print("".join("{}".format(chr(c) if c % 2 == 0 else chr(c).upper()) for c in range(122, 96, -1)), end="")
+
+""""Print the alphabet in reverse order alternating upper- and lower-case."""
+i = 0
+for c in range(ord('z'), ord('a') - 1, -1):
+        print("{}".format(chr(c - i)), end="")
+            i = 32 if i == 0 else 0
