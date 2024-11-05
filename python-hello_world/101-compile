@@ -1,6 +1,2 @@
 #!/bin/bash
-# This script compiles a Python file specified in the PYFILE environment variable
-
-echo "Compiling $PYFILE ..."
-python3 -m py_compile "$PYFILE"
-mv "${PYFILE}c" ./
+python3 -c "import py_compile; py_compile.compile('$PYFILE', '$PYFILE' + 'c')"
